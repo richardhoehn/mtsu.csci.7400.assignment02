@@ -40,7 +40,7 @@ const run = async () => {
     console.clear();
     const pollyClient = new PollyClient();
 
-    // Get User's name...
+    // Get User's name... and setup date & time variables
     const userName = await rl.question("\n\nHi,\nWhat's your name: ");
     const dateTime = new Date();
     const dayName = dateTime.toLocaleDateString('en-us', { weekday: 'long' });
@@ -74,5 +74,5 @@ const run = async () => {
     rl.close();
 };
 
-// Execute Function
+// Execute Function (async)
 run();
