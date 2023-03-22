@@ -8,8 +8,7 @@ I did not publish the `.env` located in the root of hte `/src/` folder. The foll
 
 ```
 AWS_REGION="us-east-1"
-aws_access_key_id=
-aws_secret_access_key=
-aws_session_token=
-
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_SESSION_TOKEN=
 ```
