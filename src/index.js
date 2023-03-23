@@ -2,14 +2,14 @@
 
 // University:  Middle Tennessee State University - MTSU
 // Class:       CSCI 7400 - Assignment 02
-// By:          Richard Hoehn (PhD Candiate)
+// By:          Richard Hoehn (PhD Student)
 // Pub Date:    2023-03-25
 // Due Date:    2023-04-06
-// Desc:        This is a project to introduct & demonstate AWS Polly and S3 for Assignment 02. This application
-//              requests a user's name and creates a simple text to speech command that gets syntezied by AWS Polly (cloud)
-//              and returned as a Readable Stream to the application. It then saves the file (mp3) to local disk and also
-//              uploads to a spesfic S3-bucket on AWS S3. And finally, for demonstration purposes, plays the mp3 file on 
-//              the PC's speakers as an added bonus.
+// Desc:        This is a project to introduce & demonstrate AWS Polly and S3 for Assignment 02. This application
+//              requests a user's name and creates a simple text-to-speech command that gets synthesized by
+//              AWS Polly (in the cloud) and returned as a Readable Stream to the application. It then saves the
+//              file (.mp3) to local disk and also uploads to an S3-bucket on AWS S3. And finally, for
+//              demonstration purposes, plays the mp3 file on the user's PC speakers as an added bonus.
 // Links:       * AWS Polly: https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-pollyClient/
 //              * AWS S3:    https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-s3/
 //              * NodeJS:    https://nodejs.org/en/docs
@@ -50,7 +50,7 @@ const run = async () => {
     const userName = await rl.question("\n\nHi,\nWhat's your name: ");
     const dateTime = new Date();
     const dayName = dateTime.toLocaleDateString('en-us', { weekday: 'long' });
-    const daysToWeekend = 5 - dateTime.getDay();
+    const daysToWeekend = 6 - dateTime.getDay();
     const filename = `${dateTime.toISOString()}.mp3`;
 
     const pollyParams = {
